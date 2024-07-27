@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches snapshot with logo 1`] = `
+<DocumentFragment>
+  <a
+    class="UserCard card mb-3 text-decoration-none"
+    href="/user/undefined"
+  >
+    <div
+      class="card-body"
+    >
+      <h6
+        class="card-title"
+      >
+        testusers
+      </h6>
+      <p
+        class="card-text mb-1"
+      >
+        <strong>
+          First Name:
+        </strong>
+         testName
+      </p>
+      <p
+        class="card-text"
+      >
+        <strong>
+          Last Name:
+        </strong>
+         testLast
+      </p>
+      <span
+        class="badge rounded-pill text-bg-success"
+      >
+        active
+      </span>
+    </div>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot with state pending 1`] = `
+<DocumentFragment>
+  <a
+    class="UserCard card mb-3 text-decoration-none"
+    href="/user/undefined"
+  >
+    <div
+      class="card-body"
+    >
+      <h6
+        class="card-title"
+      >
+        testUser2
+      </h6>
+      <p
+        class="card-text mb-1"
+      >
+        <strong>
+          First Name:
+        </strong>
+         testFirst
+      </p>
+      <p
+        class="card-text"
+      >
+        <strong>
+          Last Name:
+        </strong>
+         testLast
+      </p>
+      <span
+        class="badge rounded-pill text-bg-warning"
+      >
+        pending
+      </span>
+    </div>
+  </a>
+</DocumentFragment>
+`;

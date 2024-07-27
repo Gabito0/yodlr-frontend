@@ -1,0 +1,127 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container mt-5"
+  >
+    <div
+      class="row justify-content-center"
+    >
+      <div
+        class="col-md-8"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="card-header"
+          >
+            <h3>
+              Create New User
+            </h3>
+          </div>
+          <div
+            class="card-body"
+          >
+            <form>
+              <div
+                class="form-group"
+              >
+                <label
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  autocomplete="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required=""
+                  type="email"
+                  value=""
+                />
+              </div>
+              <div
+                class="form-group"
+              >
+                <label
+                  for="firstName"
+                >
+                  First Name
+                </label>
+                <input
+                  autocomplete="given-name"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  required=""
+                  value=""
+                />
+              </div>
+              <div
+                class="form-group"
+              >
+                <label
+                  for="lastName"
+                >
+                  Last Name
+                </label>
+                <input
+                  autocomplete="family-name"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  required=""
+                  value=""
+                />
+              </div>
+              <div
+                class="form-group"
+              >
+                <label
+                  for="password"
+                >
+                  Password
+                </label>
+                <input
+                  autocomplete="new-password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required=""
+                  type="password"
+                  value=""
+                />
+              </div>
+              <div
+                class="form-group form-check"
+              >
+                <input
+                  class="form-check-input"
+                  id="isAdmin"
+                  name="isAdmin"
+                  type="checkbox"
+                />
+                <label
+                  class="form-check-label"
+                  for="isAdmin"
+                >
+                  Admin Privileges
+                </label>
+              </div>
+              <button
+                class="btn btn-primary float-right"
+                type="submit"
+              >
+                Create User
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
