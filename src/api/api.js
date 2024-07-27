@@ -68,7 +68,7 @@ class userApi {
 
   /** Activate user */
   static async activateUser(data) {
-    let res = await this.request(`users/activate`, data, "put");
+    let res = await this.request(`users/activate`, data, "patch");
     return res.data.user;
   }
 
