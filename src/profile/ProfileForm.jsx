@@ -74,7 +74,7 @@ const ProfileForm = ({ logout }) => {
     setLoading(true);
     try {
       await userApi.deleteUser(currentUser.id);
-      logout(); // Ensure this function clears the session/token
+      logout();
       navigate("/login");
     } catch (err) {
       setFormErrors([err.message]);
