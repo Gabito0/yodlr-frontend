@@ -16,6 +16,7 @@ const SignupForm = ({ signup }) => {
     email: "",
     firstName: "",
     lastName: "",
+    password: "",
   });
   const [formErrors, setFormErrors] = useState([]);
 
@@ -72,6 +73,17 @@ const SignupForm = ({ signup }) => {
                   name="lastName"
                   className="form-control"
                   value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">password</label>
+                <input
+                  id="password"
+                  name="password"
+                  className="form-control"
+                  value={formData.password}
                   onChange={handleChange}
                   required
                 />
