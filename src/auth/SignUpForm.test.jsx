@@ -35,6 +35,9 @@ it("submits form with valid data", async function () {
   fireEvent.change(getByLabelText("Last name"), {
     target: { value: "User" },
   });
+  fireEvent.change(getByLabelText("password"), {
+    target: { value: "strongpassword" },
+  });
 
   fireEvent.click(getByText("Submit"));
 
@@ -43,6 +46,7 @@ it("submits form with valid data", async function () {
       email: "newuser@example.com",
       firstName: "New",
       lastName: "User",
+      password: "strongpassword",
     });
   });
 });
@@ -67,6 +71,9 @@ it("shows error messages on failed submission", async function () {
   });
   fireEvent.change(getByLabelText("Last name"), {
     target: { value: "User" },
+  });
+  fireEvent.change(getByLabelText("password"), {
+    target: { value: "weakpassword" },
   });
 
   fireEvent.click(getByText("Submit"));
