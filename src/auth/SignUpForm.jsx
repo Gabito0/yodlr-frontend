@@ -97,7 +97,7 @@ const SignupForm = ({ signup }) => {
                 type="submit"
                 className="btn btn-primary float-right mt-3"
               >
-                Submit
+                Sign up
               </button>
             </form>
           </div>

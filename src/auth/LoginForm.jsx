@@ -80,7 +80,7 @@ const LoginForm = ({ login }) => {
                 <AppAlert type="danger" messages={formErrors} />
               )}
               <button className="btn btn-primary float-right mt-3">
-                Submit
+                Log in
               </button>
             </form>
           </div>
