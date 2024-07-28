@@ -80,6 +80,7 @@ const SignupForm = ({ signup }) => {
               <div className="form-group">
                 <label htmlFor="password">password</label>
                 <input
+                  type="password"
                   id="password"
                   name="password"
                   className="form-control"
