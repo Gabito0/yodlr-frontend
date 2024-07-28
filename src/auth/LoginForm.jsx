@@ -27,17 +27,6 @@ const LoginForm = ({ login }) => {
     }
   }, [currentUser, navigate]);
 
-  // console.debug(
-  //   "LoginForm",
-  //   "login=",
-  //   typeof login,
-  //   "formData=",
-  //   formData,
-  //   "formErrors=",
-  //   formErrors
-  // );
-
-  // Handle form submission
   async function handleSubmit(evt) {
     evt.preventDefault();
     const result = await login(formData);

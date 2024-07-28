@@ -7,8 +7,6 @@ class userApi {
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
-    // console.debug("API Call:", endpoint, data, method);
-
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { Authorization: `Bearer ${userApi.token}` };
     const params = method === "get" ? data : {};
@@ -16,7 +14,6 @@ class userApi {
     try {
       return await axios({ url, method, data, params, headers });
     } catch (err) {
-      // console.error("API Error:", err.response.status, err.response.statusText);
       let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     }
@@ -28,15 +25,12 @@ class userApi {
 
   static async getCurrentUser(id) {
     let res = await this.request(`users/${id}`);
-    // console.log("api is being called");
-    // console.log(res.data);
     return res.data.user;
   }
 
   /**Get all users */
   static async getAllUsers() {
     let res = await this.request(`users/`);
-    // console.log(res, "this is getAllusrs");
     return res.data.users;
   }
 
@@ -78,53 +72,5 @@ class userApi {
     return res.status;
   }
 }
-
-async function testing() {
-  try {
-    // const token = await userApi.login({
-    //   email: "adminUser@test.com",
-    //   password: "password",
-    // });
-    // console.log(token, "logining"); // Handle the user data as needed
-    // userApi.token = token;
-    // const allusers = await userApi.getAllUsers();
-    // console.log(allusers);
-    // const user = await userApi.getCurrentUser(1);
-    // console.log(user, "getCurrentUser");
-    // const newUser = await userApi.createUser({
-    //   email: "user37@test.com",
-    //   firstName: "user35",
-    //   lastName: "user35",
-    //   isAdmin: "false",
-    //   password: "password",
-    //   state: "active",
-    // });
-    // console.log("newuser=:", newUser);
-    // const deleteUser = await userApi.deleteUser(9);
-    // console.log(deleteUser);
-    // const singUp = await userApi.signup({
-    //   email: "user40@test.com",
-    //   password: "password",
-    //   firstName: "user39",
-    //   lastName: "user39",
-    // });
-    // console.log(singUp);
-    // const updateUser = await userApi.saveProfile(12, {
-    //   email: "user46@test.com",
-    //   currentPassword: "password",
-    //   firstName: "user46",
-    //   lastName: "user46",
-    //   state: "active",
-    // });
-    // console.log(updateUser);
-    // const activateUser = await userApi.activateUser({ id: 11 });
-    // console.log(activateUser);
-  } catch (error) {
-    // console.error("error:", error);
-  }
-}
-
-// Call the function to login the user
-// testing();
 
 export default userApi;

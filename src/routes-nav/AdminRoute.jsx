@@ -12,8 +12,6 @@ import UserContext from "../auth/UserContext";
 const AdminRoute = () => {
   const { currentUser } = useContext(UserContext);
 
-  // console.debug("AdminRoute", "currentUser=", currentUser);
-
   if (!currentUser || !currentUser.isAdmin) {
     return <Navigate to="/login" />;
   }

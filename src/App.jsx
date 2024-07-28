@@ -27,23 +27,9 @@ function App() {
   const [infoLoaded, setInfoLoaded] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [token, setToken] = useLocalStorage(TOKEN_STORAGE_ID);
-  // console.debug(
-  //   "App",
-  //   "infoLoaded=",
-  //   setInfoLoaded,
-  //   "currentUser=",
-  //   currentUser,
-  //   "token=",
-  //   token
-  // );
-  // Load user info from API. Until a user is logged in and they have a token,
-  // this should not run. It only needs to re-run when a user logs out, so
-  // the value of the token is a dependenct for this effect
 
   useEffect(
     function loadUserInfo() {
-      // console.debug("App useEffect loadUserInfo", "token=", token);
-
       async function getCurrentUser() {
         if (token) {
           try {
@@ -53,7 +39,6 @@ function App() {
             let currentUser = await userApi.getCurrentUser(id);
             setCurrentUser(currentUser);
           } catch (err) {
-            // console.error("App loadUserInfo: problem loading", err);
             setCurrentUser(null);
           }
         }
@@ -71,7 +56,6 @@ function App() {
   /** Handles site-wide logout */
   function logout() {
     setCurrentUser(null);
-    // console.log("settoken is being set to null");
     setToken(null);
   }
 
@@ -86,7 +70,6 @@ function App() {
       setToken(token);
       return { success: true };
     } catch (errors) {
-      // console.error("signup failed", errors);
       return { success: false, errors };
     }
   }
@@ -107,7 +90,6 @@ function App() {
       setCurrentUser(currentUser);
       return { success: true };
     } catch (errors) {
-      // console.error("login failed", errors);
       return { success: false, errors };
     }
   }
@@ -115,7 +97,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <UserContext.Provider value={{ currentUser, setCurrentUser , setInfoLoaded}}>
+      <UserContext.Provider value={{ currentUser, setCurrentUser }}>
         <div className="App">
           <Navigation logout={logout}></Navigation>
           <AppRoutes login={login} signup={signup} logout={logout} />

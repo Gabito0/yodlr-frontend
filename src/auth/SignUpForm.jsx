@@ -19,17 +19,6 @@ const SignupForm = ({ signup }) => {
   });
   const [formErrors, setFormErrors] = useState([]);
 
-  // console.debug(
-  //   "SignupForm",
-  //   "signup=",
-  //   typeof signup,
-  //   "formData=",
-  //   formData,
-  //   "formErrors=",
-  //   formErrors
-  // );
-
-  // Handle form submission
   async function handleSubmit(evt) {
     evt.preventDefault();
     let result = await signup(formData);

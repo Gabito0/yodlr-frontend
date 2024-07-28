@@ -29,20 +29,6 @@ const ProfileForm = ({ logout }) => {
   const [saveConfirmed, setSaveConfirmed] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // console.debug(
-  //   "ProfileForm",
-  //   "currentUser=",
-  //   currentUser,
-  //   "formData=",
-  //   formData,
-  //   "formErrors=",
-  //   formErrors,
-  //   "saveConfirmed=",
-  //   saveConfirmed,
-  //   "loading=",
-  //   loading
-  // );
-
   // Handle form submission
   async function handleSubmit(evt) {
     evt.preventDefault();

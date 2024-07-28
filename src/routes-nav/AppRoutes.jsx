@@ -17,11 +17,11 @@ const AppRoutes = ({ login, signup, logout }) => {
         <Route path="/login" element={<LoginForm login={login} />} />
         <Route path="/signup" element={<SignupForm signup={signup} />} />
         <Route element={<PrivateRoute />}>
-          <Route path="/user/:id" element={<UserDetail />} />
           <Route path="/profile" element={<ProfileForm logout={logout} />} />
         </Route>
 
         <Route element={<AdminRoute />}>
+          <Route path="/user/:id" element={<UserDetail />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/users/new-user" element={<NewUserForm />} />
         </Route>

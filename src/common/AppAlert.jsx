@@ -5,8 +5,6 @@ import React from "react";
  */
 
 const AppAlert = ({ type = "danger", messages = [] }) => {
-  // console.debug("Alert", "type=", type, "messages=", messages);
-
   return (
     <div className={`alert alert-${type}`} role="alert">
       {messages.map((error) => (

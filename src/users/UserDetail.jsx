@@ -14,7 +14,6 @@ import LoadingSpinner from "../common/LoadingSpinner";
 
 const UserDetail = () => {
   const { id } = useParams();
-  // console.debug("UserDetail", "id=", id);
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,7 +26,6 @@ const UserDetail = () => {
         setUser(user);
       } catch (err) {
         setError("Error fetching user details");
-        // console.error("Error fetching user details", err);
       } finally {
         setLoading(false);
       }
@@ -42,7 +40,6 @@ const UserDetail = () => {
       setUser(updatedUser);
     } catch (err) {
       setError("Error activating user");
-      // console.error("Error activating user", err);
     }
   }
 

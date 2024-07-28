@@ -15,14 +15,11 @@ import UserCard from "./UserCard";
  * Route -> { UserCard }
  */
 const UserList = () => {
-  // console.debug("UserList");
-
   // State to store the list of users
   const [users, setUsers] = useState(null);
 
   // Fetch users on component mount
   useEffect(() => {
-    // console.debug("UserList useEffect getUsersOnMount");
     search();
   }, []);
 

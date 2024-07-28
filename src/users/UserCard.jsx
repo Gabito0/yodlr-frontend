@@ -9,8 +9,6 @@ import { Link } from "react-router-dom";
  */
 
 const UserCard = ({ id, email, firstName, lastName, state }) => {
-  // console.debug("UserCard", email);
-
   return (
     <Link
       className="UserCard card mb-3 text-decoration-none"
